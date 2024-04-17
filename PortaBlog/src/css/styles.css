@@ -1,0 +1,93 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav .logo h1 {
+  margin-left: 20px;
+}
+
+/* Navigation styles */
+.navigation {
+  list-style: none;
+  display: flex;
+}
+
+.navigation li {
+  padding: 0 15px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover effect for navigation links */
+.navigation a:hover {
+  color: #4caf50;
+}
+
+/* Main section styling */
+main {
+  padding: 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main section {
+  margin-bottom: 20px;
+}
+
+main h2 {
+  color: #333;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation li {
+    padding: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+}

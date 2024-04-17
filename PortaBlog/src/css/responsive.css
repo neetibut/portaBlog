@@ -1,0 +1,72 @@
+/* General responsiveness for smaller screens */
+@media (max-width: 1024px) {
+  body {
+    padding: 0 10px;
+  }
+
+  header,
+  footer {
+    padding: 10px;
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  .navigation {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navigation li {
+    padding: 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .navigation {
+    display: none; /* Initially hidden, shown via toggle button */
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  main {
+    margin: 10px 0;
+  }
+
+  main section {
+    padding: 10px 0;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* High density screen adjustments (e.g., Retina Displays) */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi) {
+  /* Increase font sizes for readability on high-resolution displays */
+  body,
+  footer {
+    font-size: 16px;
+  }
+}

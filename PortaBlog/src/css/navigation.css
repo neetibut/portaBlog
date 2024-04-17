@@ -1,0 +1,62 @@
+/* Navigation Bar Styles */
+nav {
+  background-color: #20232a;
+  color: #fff;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation list styling */
+.navigation {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  padding: 15px 10px;
+}
+
+.navigation a {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Mobile navigation toggle visibility (hidden by default, shown by JS when needed) */
+.mobile-nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Responsive Navigation Menu */
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Hidden by default, shown when mobile menu is toggled */
+    padding: 20px 0;
+  }
+
+  .navigation li {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+}

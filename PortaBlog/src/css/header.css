@@ -1,0 +1,79 @@
+/* Header Component Styles */
+header {
+  background-color: #20232a;
+  color: #61dafb;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo styles */
+.logo {
+  float: left;
+  font-size: 24px;
+  margin: 0;
+  padding: 0 15px;
+}
+
+.logo h1 {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navigation li {
+  margin: 0 10px;
+}
+
+.navigation a {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Clearfix for the floating logo */
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Header responsiveness */
+@media (max-width: 768px) {
+  .logo,
+  .navigation {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .navigation li {
+    padding: 8px 0;
+  }
+}
