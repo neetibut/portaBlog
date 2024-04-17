@@ -13,55 +13,59 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <h1>PortaBlog</h1>
-      </div>
-      <button
-        class="mobile-nav-toggle"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-      >
-        <span class="sr-only">Menu</span>
-        <!-- Screen-reader-only text -->
-      </button>
-      <nav>
-        <ul class="navigation" id="primary-navigation">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+        <div class="logo">
+            <h1>PortaBlog</h1>
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" onclick="toggleNavigation()">
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav>
+            <ul class="navigation" id="primary-navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-      <section id="home">
-        <h2>Welcome to PortaBlog</h2>
-        <p>Your all-in-one solution for personal and professional blogging.</p>
-      </section>
-      <section id="about">
-        <h2>About Us</h2>
-        <p>Learn more about our mission and the team behind PortaBlog.</p>
-      </section>
-      <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Showcase your work and projects in a professional manner.</p>
-      </section>
-      <section id="blog">
-        <h2>Blog</h2>
-        <p>Read our latest posts and updates.</p>
-      </section>
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us via the contact form below.</p>
-      </section>
+        <section id="home">
+            <h2>Welcome to PortaBlog</h2>
+            <p>Your all-in-one solution for personal and professional blogging.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn more about our mission and the team behind PortaBlog.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Showcase your work and projects in a professional manner.</p>
+        </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Read our latest posts and updates.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 PortaBlog. All rights reserved.</p>
+        <p>&copy; 2024 PortaBlog. All rights reserved.</p>
     </footer>
 
     <script src="src/js/script.js"></script>
-  </body>
+    <script src="src/js/form.js"></script>
+    <script src="src/js/navigation.js"></script>
+</body>
+</html>
 </html>

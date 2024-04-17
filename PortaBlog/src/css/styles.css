@@ -29,8 +29,8 @@ p {
 
 /* Header styles */
 header {
-  background-color: #20232a;
-  color: #61dafb;
+  background-color: #333;
+  color: #fff;
   padding: 1rem;
   text-align: center;
 }
@@ -100,11 +100,43 @@ main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Form Styles */
+form {
+  margin-top: 20px;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
 /* Footer styles */
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #20232a;
+  background-color: #333;
   color: #fff;
   position: relative;
   bottom: 0;
