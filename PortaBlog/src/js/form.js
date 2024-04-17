@@ -1,48 +1,56 @@
-// Function to validate email format
+// Validate email format
 function validateEmail(email) {
   const re =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
 
-// Function to handle form submission
+// Validate phone number format
+function validatePhone(phone) {
+  const re = /^\d{10}$/; // Simple regex for US phone numbers
+  return re.test(phone);
+}
+
+// Handle form submission
 function handleFormSubmit(event) {
-  event.preventDefault(); // Prevent default form submission behavior
+  event.preventDefault(); // Stop the form from submitting normally
 
-  const emailInput = document.querySelector("#email");
-  const messageInput = document.querySelector("#message");
-  const errorMessages = [];
+  // Get form elements
+  const form = event.target;
+  const email = form.querySelector("#email");
+  const message = form.querySelector("#message");
+  const name = form.querySelector("#name");
+  const phone = form.querySelector("#phone");
 
-  // Validate the email field
-  if (!emailInput.value || !validateEmail(emailInput.value)) {
-    errorMessages.push("Please enter a valid email address.");
-  }
+  // Validate input fields and collect errors
+  let errors = [];
+  if (!name.value.trim()) errors.push("Name is required.");
+  if (!email.value || !validateEmail(email.value))
+    errors.push("Enter a valid email address.");
+  if (phone.value && !validatePhone(phone.value))
+    errors.push("Enter a valid phone number with 10 digits.");
+  if (!message.value.trim()) errors.push("Message cannot be empty.");
 
-  // Check if the message field is not empty
-  if (!messageInput.value) {
-    errorMessages.push("Please enter your message.");
-  }
-
-  // Display error messages or process the form
-  if (errorMessages.length > 0) {
-    alert("Error:\n" + errorMessages.join("\n"));
+  // Display errors or process the form
+  if (errors.length) {
+    alert("Please correct the following errors:\n" + errors.join("\n"));
   } else {
-    console.log("Email:", emailInput.value);
-    console.log("Message:", messageInput.value);
+    console.log("Form Submitted", {
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      message: message.value,
+    });
+    // Placeholder for AJAX request to server
+    alert("Thank you for your message! We will get back to you soon.");
 
-    // Placeholder for AJAX call to submit the form data to a server
-    alert("Thank you for your message!");
-
-    // Optionally, clear the form fields after successful submission
-    emailInput.value = "";
-    messageInput.value = "";
+    // Clear the form fields after submission
+    form.reset();
   }
 }
 
-// Attach event listeners to the form on DOM content loaded
+// Attach the form submission handler when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", handleFormSubmit);
-  }
+  contactForm.addEventListener("submit", handleFormSubmit);
 });

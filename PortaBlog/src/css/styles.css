@@ -79,18 +79,6 @@ nav {
   cursor: pointer;
 }
 
-/* Accessibly hide screen-reader-only elements */
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
 /* Main section styling */
 main {
   background: white;
@@ -105,13 +93,25 @@ form {
   margin-top: 20px;
 }
 
+input[type="text"],
 input[type="email"],
+input[type="tel"],
 textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+input:valid,
+textarea:valid {
+  border-color: green;
 }
 
 button {
