@@ -1,14 +1,15 @@
 /* Footer styles */
 footer {
-  background-color: #20232a;
-  color: #61dafb;
+  background-color: #333;
+  color: #fff;
   text-align: center;
   padding: 20px 10px;
-  font-size: 14px;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15);
-  position: relative;
+  font-size: 16px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
   bottom: 0;
   width: 100%;
+  clear: both; /* Clears floating elements, ensuring the footer stays at the bottom */
 }
 
 footer p {
@@ -17,29 +18,10 @@ footer p {
   line-height: 1.5;
 }
 
-/* Social icons links, if any */
-.footer-icons {
-  margin-top: 10px;
-}
-
-.footer-icons a {
-  color: #61dafb;
-  padding: 0 10px;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer-icons a:hover,
-.footer-icons a:focus {
-  color: #ffffff;
-}
-
-/* Footer responsiveness for smaller screens */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   footer {
     padding: 15px 5px;
-  }
-
-  .footer-icons a {
-    padding: 5px;
+    font-size: 14px; /* Slightly reduce font size for small devices */
   }
 }

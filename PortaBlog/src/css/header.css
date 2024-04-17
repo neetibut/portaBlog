@@ -1,22 +1,21 @@
-/* Header Component Styles */
+/* Header styles */
 header {
-  background-color: #20232a;
-  color: #61dafb;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative; /* Needed for positioning the nav toggle absolutely */
 }
 
 /* Logo styles */
 .logo {
   float: left;
-  font-size: 24px;
-  margin: 0;
-  padding: 0 15px;
+  margin-left: 20px;
 }
 
 .logo h1 {
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 /* Navigation styles */
@@ -24,56 +23,64 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  padding: 0 20px;
 }
 
 .navigation {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style: none;
   display: flex;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation li {
-  margin: 0 10px;
+  padding: 0 15px;
 }
 
 .navigation a {
-  color: #61dafb;
+  color: white;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  transition: color 0.3s ease-in-out;
+  font-weight: bold;
 }
 
+/* Hover effect for navigation links */
 .navigation a:hover,
 .navigation a:focus {
-  color: #ffffff;
+  color: #4caf50;
   text-decoration: underline;
 }
 
-/* Clearfix for the floating logo */
-header::after {
-  content: "";
-  display: table;
-  clear: both;
+/* Mobile navigation toggle styles */
+.mobile-nav-toggle {
+  display: none; /* Default state for larger screens */
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-/* Header responsiveness */
 @media (max-width: 768px) {
+  /* Responsive adjustments for mobile */
   .logo,
-  .navigation {
-    float: none;
-    text-align: center;
+  nav {
     width: 100%;
+    text-align: center;
+    float: none;
   }
 
-  .logo {
-    margin-bottom: 10px;
+  .navigation {
+    flex-direction: column;
   }
 
   .navigation li {
-    padding: 8px 0;
+    padding: 10px;
+  }
+
+  .mobile-nav-toggle {
+    display: block; /* Show toggle button on smaller screens */
   }
 }

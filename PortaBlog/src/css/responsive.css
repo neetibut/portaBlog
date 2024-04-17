@@ -1,72 +1,101 @@
-/* General responsiveness for smaller screens */
-@media (max-width: 1024px) {
-  body {
-    padding: 0 10px;
-  }
-
-  header,
-  footer {
-    padding: 10px;
-  }
-}
-
-/* Tablet responsiveness */
+/* High Priority Base Styles for Mobile Devices */
 @media (max-width: 768px) {
-  header nav {
-    flex-direction: column;
+  body {
+    font-size: 14px;
+    padding: 5px;
   }
 
-  .navigation {
-    flex-direction: column;
-    width: 100%;
+  header {
+    padding: 0.5rem;
   }
 
-  .navigation li {
-    padding: 10px;
-  }
-
-  main {
-    padding: 10px;
-  }
-
-  footer {
-    padding: 20px 10px;
-  }
-}
-
-/* Mobile responsiveness */
-@media (max-width: 480px) {
   .logo h1 {
     font-size: 20px;
   }
 
-  .navigation {
-    display: none; /* Initially hidden, shown via toggle button */
-  }
-
-  .mobile-nav-toggle {
-    display: block;
+  nav {
+    padding: 0.5rem;
   }
 
   main {
-    margin: 10px 0;
+    padding: 10px;
   }
 
-  main section {
-    padding: 10px 0;
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation a {
+    padding: 10px;
+    display: block; /* Ensure touch targets are large enough */
   }
 
   footer {
-    font-size: 12px;
+    padding: 10px 5px;
+  }
+
+  .mobile-nav-toggle {
+    display: block; /* Ensure toggle button is visible */
   }
 }
 
-/* High density screen adjustments (e.g., Retina Displays) */
+/* Medium Devices (Tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+
+  .navigation li {
+    padding: 0 20px;
+  }
+
+  .navigation a {
+    font-size: 18px;
+  }
+}
+
+/* Large Screens and Desktops */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  header,
+  nav,
+  footer {
+    padding: 1rem;
+  }
+
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  .navigation li {
+    padding: 0 25px;
+  }
+
+  .navigation a {
+    font-size: 20px;
+  }
+}
+
+/* High-Density Retina Displays */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min-resolution: 192dpi) {
-  /* Increase font sizes for readability on high-resolution displays */
   body,
+  header,
   footer {
-    font-size: 16px;
+    font-size: 16px; /* Adjust font size for better readability */
   }
 }

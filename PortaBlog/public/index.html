@@ -13,11 +13,19 @@
   </head>
   <body>
     <header>
+      <div class="logo">
+        <h1>PortaBlog</h1>
+      </div>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+        <!-- Screen-reader-only text -->
+      </button>
       <nav>
-        <div class="logo">
-          <h1>PortaBlog</h1>
-        </div>
-        <ul class="navigation">
+        <ul class="navigation" id="primary-navigation">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>

@@ -3,38 +3,54 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Arial", sans-serif;
 }
 
 body {
-  font-family: "Arial", sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f4f4f4;
+  padding: 10px;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #20232a;
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 /* Header styles */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem 0;
+  background-color: #20232a;
+  color: #61dafb;
+  padding: 1rem;
   text-align: center;
 }
 
+/* Navigation styles */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 }
 
-nav .logo h1 {
-  margin-left: 20px;
+.logo h1 {
+  float: left;
+  margin-right: 20px;
 }
 
-/* Navigation styles */
 .navigation {
   list-style: none;
   display: flex;
+  padding: 0;
 }
 
 .navigation li {
@@ -42,39 +58,57 @@ nav .logo h1 {
 }
 
 .navigation a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Hover effect for navigation links */
-.navigation a:hover {
+.navigation a:hover,
+.navigation a:focus {
   color: #4caf50;
+  text-decoration: underline;
+}
+
+/* Mobile Navigation Toggle */
+.mobile-nav-toggle {
+  display: none; /* Hidden on desktops, visible on mobile via media query */
+  background: none;
+  border: none;
+  color: #61dafb;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Accessibly hide screen-reader-only elements */
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* Main section styling */
 main {
-  padding: 20px;
   background: white;
-  margin: 20px;
+  margin: 20px 0;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-main section {
-  margin-bottom: 20px;
-}
-
-main h2 {
-  color: #333;
 }
 
 /* Footer styles */
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #333;
+  background-color: #20232a;
   color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Responsive styles */
@@ -85,6 +119,10 @@ footer {
 
   .navigation li {
     padding: 10px;
+  }
+
+  .mobile-nav-toggle {
+    display: block; /* Show the toggle button on small screens */
   }
 
   nav {
